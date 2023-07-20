@@ -14,14 +14,13 @@
 <script>
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
-//import Dashboard from "@/views/Dashboard.vue";
 
 export default {
   name: "App",
   components: {Topbar, Sidebar},
   data: () => ({
     cards: ["Today", "Yesterday"],
-    drawer: null,
+    drawer: true,
   }),
   methods: {},
 };

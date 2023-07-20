@@ -54,7 +54,7 @@
         </span>
       </template>
 
-      <v-card width="270" >
+      <v-card width="270">
         <v-img
             height="100px"
             src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
@@ -74,13 +74,12 @@
         <v-list width="250" class="py-0">
 
 
-
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
             <v-list-item-icon>
               <v-icon>{{ menu.icon }}</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>
+            <v-list-item-title class="text__profile-child">
               {{ menu.title }}
             </v-list-item-title>
           </v-list-item>
@@ -143,5 +142,8 @@ export default {
 </script>
 
 <style scoped>
-
+.text__profile-child {
+  font-size: 11px;
+  font-weight: 400;
+}
 </style>

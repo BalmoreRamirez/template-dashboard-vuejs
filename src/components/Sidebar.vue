@@ -10,26 +10,16 @@
           <v-icon>mdi-home</v-icon>
         </v-list-item-icon>
 
-        <v-list-item-title>Inicio</v-list-item-title>
+        <v-list-item-title class="text__sidebar">Inicio</v-list-item-title>
       </v-list-item>
+
       <v-list-group
           :value="true"
           prepend-icon="mdi-account-circle"
       >
         <template v-slot:activator>
-          <v-list-item-title>Usuarios</v-list-item-title>
+          <v-list-item-title class="text__sidebar">Usuarios</v-list-item-title>
         </template>
-
-        <v-list-group
-            :value="true"
-            no-action
-            sub-group
-        >
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>Administrador</v-list-item-title>
-            </v-list-item-content>
-          </template>
 
           <v-list-item
               v-for="([title, icon], i) in admins"
@@ -39,14 +29,10 @@
             <v-list-item-icon>
               <v-icon v-text="icon"></v-icon>
             </v-list-item-icon>
-            <v-list-item-title v-text="title"></v-list-item-title>
-
+            <v-list-item-title v-text="title" class="text__sidebar-child"></v-list-item-title>
 
           </v-list-item>
         </v-list-group>
-
-
-      </v-list-group>
 
     </v-list>
   </v-navigation-drawer>
@@ -74,4 +60,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.text__sidebar{
+  font-size: 12px;
+  font-weight: 500;
+}
+.text__sidebar-child{
+  font-size: 11px;
+  font-weight: 400;
+}
+</style>
