@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer :value="drawer" app>
+  <v-navigation-drawer :value="drawer" app style="box-shadow: 7px 0 60px rgba(0,0,0,.05);">
 
     <v-divider></v-divider>
 

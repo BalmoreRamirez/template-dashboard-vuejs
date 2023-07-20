@@ -39,6 +39,7 @@
       </v-list>
     </v-menu>
     <v-menu offset-y>
+
       <template v-slot:activator="{ attrs, on }">
         <span style="cursor: pointer" v-bind="attrs" v-on="on">
           <v-chip link>
@@ -47,31 +48,47 @@
                 <v-img src="https://randomuser.me/api/portraits/women/81.jpg"/>
               </v-avatar>
             </v-badge>
-            <span class="ml-3">Jane Smith</span>
+            <span class="ml-3">Maria Ramirez</span>
           </v-chip>
         </span>
       </template>
-      <v-list width="250" class="py-0">
-        <v-list-item two-line>
-          <v-list-item-avatar>
-            <img src="https://randomuser.me/api/portraits/women/81.jpg"/>
-          </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Jane Smith</v-list-item-title>
-            <v-list-item-subtitle>Logged In</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-        <v-divider/>
-        <v-list-item link v-for="(menu, i) in menus" :key="i">
-          <v-list-item-icon>
-            <v-icon>{{ menu.icon }}</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>
-            {{ menu.title }}
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
+      <v-card>
+        <v-img
+            height="100px"
+            src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
+        >
+          <v-card-title class="white--text mt-4">
+            <v-avatar size="50">
+              <img
+                  alt="user"
+                  src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
+              >
+            </v-avatar>
+            <p class="ml-3">
+              John Doe
+            </p>
+          </v-card-title>
+        </v-img>
+        <v-list width="250" class="py-0">
+
+          <v-list-item two-line>
+
+
+          </v-list-item>
+
+          <v-divider/>
+          <v-list-item link v-for="(menu, i) in menus" :key="i">
+            <v-list-item-icon>
+              <v-icon>{{ menu.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>
+              {{ menu.title }}
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-card>
+
     </v-menu>
   </v-app-bar>
 </template>
