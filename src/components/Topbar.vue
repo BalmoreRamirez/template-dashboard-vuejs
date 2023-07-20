@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app elevate-on-scroll elevation="3"
+  <v-app-bar app elevate-on-scroll elevation="23"
              style="box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
     <v-app-bar-nav-icon @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
     <v-spacer/>
@@ -38,6 +38,7 @@
         </template>
       </v-list>
     </v-menu>
+
     <v-menu offset-y>
 
       <template v-slot:activator="{ attrs, on }">
@@ -53,7 +54,7 @@
         </span>
       </template>
 
-      <v-card>
+      <v-card width="270" >
         <v-img
             height="100px"
             src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
@@ -62,20 +63,17 @@
             <v-avatar size="50">
               <img
                   alt="user"
-                  src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
+                  src="https://randomuser.me/api/portraits/women/81.jpg"
               >
             </v-avatar>
             <p class="ml-3">
-              John Doe
+              Maria Ramirez
             </p>
           </v-card-title>
         </v-img>
         <v-list width="250" class="py-0">
 
-          <v-list-item two-line>
 
-
-          </v-list-item>
 
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
@@ -100,10 +98,10 @@ export default {
   data() {
     return {
       menus: [
-        {title: "Profile", icon: "mdi-account"},
-        {title: "Change Password", icon: "mdi-key"},
-        {title: "Setting", icon: "mdi-cog"},
-        {title: "Logout", icon: "mdi-logout"},
+        {title: "Perfil", icon: "mdi-account"},
+        {title: "Cambiar contraseña", icon: "mdi-key"},
+        {title: "Configuración", icon: "mdi-cog"},
+        {title: "Cierre de sesión", icon: "mdi-logout"},
       ],
       items: [
         {
