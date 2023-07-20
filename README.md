@@ -1,7 +1,7 @@
 # Dashboard
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/yourusername/dashboard)
-[![License](https://img.shields.io/badge/license-Private-red.svg)](https://github.com/yourusername/dashboard/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-public-red.svg)](https://github.com/yourusername/dashboard/blob/main/LICENSE)
 
 ## Descripcion
 
@@ -11,19 +11,19 @@ Dashboard es una aplicación web creada con Vue.js y Vuetify para crear una inte
 Antes de ejecutar la aplicación, asegúrate de que tienes Node.js y npm instalados.
 nodejs:v18.16.1
 npm: 9.5.1
-1. Clone this repository:
+1. Clonar el repositorio:
 
 ```bash
 git clone https://github.com/yourusername/dashboard.git
 ```
 
-2. Navigate to the project directory:
+2. Navegue hasta el directorio del proyecto:
 
 ```bash
 cd dashboard
 ```
 
-3. Install the dependencies:
+3. Instalar las dependencias:
 
 ```bash
 npm install
@@ -33,18 +33,16 @@ npm install
 
 ### Development Server
 
-To run the development server, use the following command:
-
+Para ejecutar el servidor de desarrollo, utilice el siguiente comando:
 ```bash
 npm run serve
 ```
 
-The development server will be accessible at `http://localhost:8080`.
+El servidor de desarrollo estará accesible en `http://localhost:8080`.
 
-### Building the Project
+### Building el Projecto
 
-To build the project for production, use the following command:
-
+Para compilar el proyecto para producción, utilice el siguiente comando:
 ```bash
 npm run build
 ```
@@ -59,14 +57,14 @@ To run ESLint for linting the project, use the following command:
 npm run lint
 ```
 
-## Dependencies
+## Dependencias
 
 - core-js: ^3.8.3
 - vue: ^2.6.14
 - vue-router: ^3.6.5
 - vuetify: ^2.6.0
 
-## Dev Dependencies
+## Dev Dependencias
 
 - @babel/core: ^7.12.16
 - @babel/eslint-parser: ^7.12.16
@@ -81,10 +79,9 @@ npm run lint
 - vue-template-compiler: ^2.6.14
 - vuetify-loader: ^1.7.0
 
-## ESLint Configuration
+## ESLint Configuracion
 
-The project uses ESLint with the following configuration:
-
+El proyecto utiliza ESLint con la siguiente configuración:
 ```json
 {
   "root": true,
@@ -101,19 +98,9 @@ The project uses ESLint with the following configuration:
   "rules": {}
 }
 ```
+## Licencia
 
-## Browserslist
+Este proyecto es publico de código abierto.
+## Autor
 
-The project targets the following browsers:
-
-- > 1%
-- last 2 versions
-- not dead
-
-## License
-
-This project is private and not open source.
-
-## Author
-
-Your Name
+Balmore Ramirez
