@@ -4,8 +4,7 @@
     <Topbar @drawerEvent="drawer = !drawer"/>
     <v-main style="background: #f1f4f6">
       <v-container class="py-8 px-6" fluid>
-        <!--<Dashboard></Dashboard>-->
-        <router-view></router-view>
+        <router-view/>
       </v-container>
     </v-main>
   </v-app>
