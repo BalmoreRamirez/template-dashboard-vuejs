@@ -14,7 +14,7 @@ npm: 9.5.1
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/yourusername/dashboard.git
+git clone git@github.com:BalmoreRamirez/template-dashboard-vuejs.git
 ```
 
 2. Navegue hasta el directorio del proyecto:
