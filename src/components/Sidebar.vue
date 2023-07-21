@@ -1,74 +1,28 @@
 <template>
-  <v-navigation-drawer :value="drawer" app style="box-shadow: 7px 0 60px rgba(0,0,0,.05);">
-
-    <v-divider></v-divider>
-
+  <v-navigation-drawer app :value="drawer" style="box-shadow: 7px 0 60px rgba(0,0,0,.05);" width="285">
     <v-list>
-
-      <v-list-item>
-        <v-list-item-icon>
-          <v-icon>mdi-home</v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-title>Home</v-list-item-title>
-      </v-list-item>
       <v-list-group
-          :value="true"
-          prepend-icon="mdi-account-circle"
+          v-for="item in items"
+          :key="item.title"
+          v-model="item.active"
+          :prepend-icon="item.action"
+          no-action
       >
         <template v-slot:activator>
-          <v-list-item-title>Users</v-list-item-title>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
         </template>
 
-        <v-list-group
-            :value="true"
-            no-action
-            sub-group
+        <v-list-item
+            v-for="child in item.items"
+            :key="child.title"
         >
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>Admin</v-list-item-title>
-            </v-list-item-content>
-          </template>
-
-          <v-list-item
-              v-for="([title, icon], i) in admins"
-              :key="i"
-              link
-          >
-            <v-list-item-icon>
-              <v-icon v-text="icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-title v-text="title"></v-list-item-title>
-
-
-          </v-list-item>
-        </v-list-group>
-
-        <v-list-group
-            no-action
-            sub-group
-        >
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>Actions</v-list-item-title>
-            </v-list-item-content>
-          </template>
-
-          <v-list-item
-              v-for="([title, icon], i) in cruds"
-              :key="i"
-              link
-          >
-            <v-list-item-icon>
-              <v-icon v-text="icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-title v-text="title"></v-list-item-title>
-
-          </v-list-item>
-        </v-list-group>
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list-group>
-
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -78,21 +32,61 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Sidebar",
   props: ["drawer"],
-  data() {
-    return {
-      admins: [
-        ['Management', 'mdi-account-multiple-outline'],
-        ['Settings', 'mdi-cog-outline'],
-      ],
-      cruds: [
-        ['Create', 'mdi-plus-outline'],
-        ['Read', 'mdi-file-outline'],
-        ['Update', 'mdi-update'],
-        ['Delete', 'mdi-delete'],
-      ],
-    };
-  },
+  data: () => ({
+    items: [
+      {
+        action: 'mdi-ticket',
+        items: [{title: 'List Item'}],
+        title: 'Attractions',
+      },
+      {
+        action: 'mdi-silverware-fork-knife',
+        active: true,
+        items: [
+          {title: 'Breakfast & brunch'},
+          {title: 'New American'},
+          {title: 'Sushi'},
+        ],
+        title: 'Dining',
+      },
+      {
+        action: 'mdi-school',
+        items: [{title: 'List Item'}],
+        title: 'Education',
+      },
+      {
+        action: 'mdi-human-male-female-child',
+        items: [{title: 'List Item'}],
+        title: 'Family',
+      },
+      {
+        action: 'mdi-bottle-tonic-plus',
+        items: [{title: 'List Item'}],
+        title: 'Health',
+      },
+      {
+        action: 'mdi-briefcase',
+        items: [{title: 'List Item'}],
+        title: 'Office',
+      },
+      {
+        action: 'mdi-tag',
+        items: [{title: 'List Item'}],
+        title: 'Promotions',
+      },
+    ],
+  }),
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.text__sidebar {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text__sidebar-child {
+  font-size: 11px;
+  font-weight: 400;
+}
+</style>
