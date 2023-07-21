@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app
+  <v-app-bar app fluid color=”white” elevation=”2″
              style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
     <v-app-bar-nav-icon @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
     <v-spacer/>
