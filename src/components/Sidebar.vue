@@ -10,7 +10,7 @@
       >
         <template v-slot:activator>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title"></v-list-item-title>
+            <v-list-item-title v-text="item.title" class="text__sidebar"></v-list-item-title>
           </v-list-item-content>
         </template>
 
@@ -20,7 +20,7 @@
             link
         >
           <v-list-item-content>
-            <v-list-item-title v-text="child.title"></v-list-item-title>
+            <v-list-item-title v-text="child.title" class="text__sidebar-child"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -41,7 +41,6 @@ export default {
       },
       {
         action: 'mdi-silverware-fork-knife',
-        active: true,
         items: [
           {title: 'Breakfast & brunch'},
           {title: 'New American'},

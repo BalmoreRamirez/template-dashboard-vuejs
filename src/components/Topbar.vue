@@ -1,6 +1,6 @@
 <template>
-  <v-system-bar app   color=”white” height="60" fixed class="px-5"
-             style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
+  <v-system-bar app color=”white” height="60" fixed class="px-5"
+                style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
     <v-img
         max-height="23"
         max-width="97"
@@ -20,7 +20,7 @@
                 <v-img src="https://randomuser.me/api/portraits/women/81.jpg"/>
               </v-avatar>
             </v-badge>
-            <span class="ml-3">Maria Ramirez</span>
+            <span class="ml-3 name-profile">Maria Ramirez</span>
           </v-chip>
         </span>
       </template>
@@ -42,7 +42,7 @@
             </p>
           </v-card-title>
         </v-img>
-        <v-list width="250" class="py-0" >
+        <v-list width="250" class="py-0">
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
             <v-list-item-icon>
@@ -80,9 +80,14 @@ export default {
   font-size: 11px;
   font-weight: 400;
 }
+
 .v-system-bar .v-btn .v-icon {
   color: #3f6ad8;
   width: 22px;
   height: 2px;
+}
+
+@media (max-width: 375px) {
+  .name-profile { display: none; }
 }
 </style>
