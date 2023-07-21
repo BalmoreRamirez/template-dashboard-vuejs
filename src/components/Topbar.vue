@@ -1,10 +1,17 @@
 <template>
-  <v-app-bar app fluid color=”white” elevation=”2″
+  <v-system-bar app   color=”white” elevation=”2″ height="50" fixed class="px-5"
              style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
-    <v-app-bar-nav-icon @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
+
+    <v-img
+        lazy-src="https://picsum.photos/id/11/10/6"
+        max-height="42"
+        max-width="227"
+        src="https://picsum.photos/id/11/500/300"
+    ></v-img>
+    <v-app-bar-nav-icon class="pl-5" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
+
     <v-spacer/>
-    <v-col lg="6" cols="12">
-    </v-col>
+
     <v-spacer/>
     <v-menu offset-y>
       <template v-slot:activator="{ attrs, on }">
@@ -37,7 +44,7 @@
             </p>
           </v-card-title>
         </v-img>
-        <v-list width="250" class="py-0">
+        <v-list width="250" class="py-0" >
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
             <v-list-item-icon>
@@ -50,7 +57,7 @@
         </v-list>
       </v-card>
     </v-menu>
-  </v-app-bar>
+  </v-system-bar>
 </template>
 
 <script>
