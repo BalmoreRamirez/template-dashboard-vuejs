@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app :value="drawer" style="box-shadow: 7px 0 60px rgba(0,0,0,.05);" width="285">
+  <v-navigation-drawer app :value="drawer" style="z-index: 3;box-shadow: 7px 0 60px rgba(0,0,0,.05);" width="285">
     <v-list>
       <v-list-group
           v-for="item in items"
@@ -17,6 +17,7 @@
         <v-list-item
             v-for="child in item.items"
             :key="child.title"
+            link
         >
           <v-list-item-content>
             <v-list-item-title v-text="child.title"></v-list-item-title>
@@ -29,8 +30,7 @@
 
 <script>
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: "Sidebar",
+  name: "SideBar",
   props: ["drawer"],
   data: () => ({
     items: [

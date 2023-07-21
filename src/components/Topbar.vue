@@ -1,18 +1,16 @@
 <template>
-  <v-system-bar app   color=”white” elevation=”2″ height="50" fixed class="px-5"
+  <v-system-bar app   color=”white” height="60" fixed class="px-5"
              style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
-
     <v-img
-        lazy-src="https://picsum.photos/id/11/10/6"
-        max-height="42"
-        max-width="227"
-        src="https://picsum.photos/id/11/500/300"
+        max-height="23"
+        max-width="97"
+        src="@/assets/logo-inverse.png"
     ></v-img>
-    <v-app-bar-nav-icon class="pl-5" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
+
+    <v-app-bar-nav-icon class="ml-10" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
 
     <v-spacer/>
 
-    <v-spacer/>
     <v-menu offset-y>
       <template v-slot:activator="{ attrs, on }">
         <span style="cursor: pointer" v-bind="attrs" v-on="on">
@@ -57,12 +55,13 @@
         </v-list>
       </v-card>
     </v-menu>
+
   </v-system-bar>
 </template>
 
 <script>
 export default {
-  name: `Topbar`,
+  name: `TopBar`,
   data() {
     return {
       menus: [
@@ -80,5 +79,10 @@ export default {
 .text__profile-child {
   font-size: 11px;
   font-weight: 400;
+}
+.v-system-bar .v-btn .v-icon {
+  color: #3f6ad8;
+  width: 22px;
+  height: 2px;
 }
 </style>

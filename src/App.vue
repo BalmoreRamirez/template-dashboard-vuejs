@@ -1,24 +1,24 @@
 <template>
   <v-app id="inspire">
-    <Sidebar :drawer="drawer"/>
-    <Topbar @drawerEvent="drawer = !drawer"/>
+    <SideBar :drawer="drawer"/>
+    <TopBar @drawerEvent="drawer = !drawer"/>
     <v-main style="background: #f1f4f6">
       <v-container class="py-8 px-6" fluid>
-        <router-view/>
+        <!--Todo: check name components-->
+        <!--<router-view/>-->
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Sidebar from "./components/Sidebar";
-import Topbar from "./components/Topbar";
+import SideBar from "./components/Sidebar";
+import TopBar from "./components/Topbar";
 
 export default {
   name: "App",
-  components: {Topbar, Sidebar},
+  components: {TopBar, SideBar},
   data: () => ({
-    cards: ["Today", "Yesterday"],
     drawer: true,
   }),
   methods: {},
