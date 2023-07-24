@@ -51,4 +51,4 @@ Este proyecto está bajo la licencia MIT.
 
 ## Contacto
 
-Para cualquier consulta o pregunta, por favor contáctanos a través de [correo electrónico](mailto:contacto@example.com) o visita nuestro sitio web en [https://www.laravel.com](https://www.laravel.com).
+Para cualquier consulta o pregunta, por favor contáctanos a través de [correo electrónico](mailto:camaleoncode@gmail.com) o visita nuestro sitio web en [https://www.laravel.com](https://balmoreramirez.netlify.app/).
