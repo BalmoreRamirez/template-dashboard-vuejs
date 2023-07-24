@@ -4,8 +4,7 @@
     <TopBar @drawerEvent="drawer = !drawer"/>
     <v-main style="background: #f1f4f6">
       <v-container class="py-8 px-6" fluid>
-        <!--Todo: check name components-->
-        <!--<router-view/>-->
+        <DataTable></DataTable>
       </v-container>
     </v-main>
   </v-app>
@@ -14,10 +13,11 @@
 <script>
 import SideBar from "./components/Sidebar";
 import TopBar from "./components/Topbar";
+import DataTable from "@/components/dashboard/DataTable.vue";
 
 export default {
   name: "App",
-  components: {TopBar, SideBar},
+  components: {DataTable, TopBar, SideBar},
   data: () => ({
     drawer: true,
   }),

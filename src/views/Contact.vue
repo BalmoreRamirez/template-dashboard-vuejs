@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h2>Luna</h2>
+    <h2>Hola mundo</h2>
   </div>
 </template>
 
-<script setup>
+<script>
 export default {
-  name: 'Contact',
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Contact"
 }
 </script>
-
 
 <style scoped>
 

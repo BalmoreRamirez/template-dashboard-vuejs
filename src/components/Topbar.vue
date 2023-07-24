@@ -28,7 +28,7 @@
       <v-card width="270">
         <v-img
             height="100px"
-            src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
+            src="@/assets/image-profile-header.jpg"
         >
           <v-card-title class="white--text mt-4">
             <v-avatar size="50">

@@ -1,4 +1,4 @@
-# Dashboard
+# Dashboard vuejs y vuetify
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/yourusername/dashboard)
 [![License](https://img.shields.io/badge/license-public-red.svg)](https://github.com/yourusername/dashboard/blob/main/LICENSE)
@@ -6,10 +6,10 @@
 ## Descripcion
 
 Dashboard es una aplicación web creada con Vue.js y Vuetify para crear una interfaz de panel de control dinámica y con capacidad de respuesta.
+
 ## Instalacion
 
-Antes de ejecutar la aplicación, asegúrate de que tienes Node.js y npm instalados.
-nodejs:v18.16.1
+Antes de ejecutar la aplicación, asegúrate de que tienes las siguientes version de de nodejs:v18.16.1
 npm: 9.5.1
 1. Clonar el repositorio:
 
