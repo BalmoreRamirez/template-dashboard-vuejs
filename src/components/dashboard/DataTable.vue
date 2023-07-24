@@ -31,14 +31,14 @@
     </template>
     <template v-slot:[`item.actions`]="{ item }">
       <v-icon
-          small
+          color="primary"
           class="mr-2"
           @click="editItem(item)"
       >
         mdi-pencil
       </v-icon>
       <v-icon
-          small
+          color="red"
           @click="deleteItem(item)"
       >
         mdi-delete
