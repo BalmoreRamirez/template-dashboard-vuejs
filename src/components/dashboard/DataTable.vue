@@ -1,69 +1,48 @@
 <template>
-<div>
-  <h2 style="color: #495057;font-weight: 400; font-size: 1.25rem">Datos en tiempo real</h2>
+  <div>
+    <h2 style="color: #495057;font-weight: 400; font-size: 1.25rem">Datos en tiempo real</h2>
 
-  <template>
-    <v-breadcrumbs :items="items" class="pa-0 mb-4">
-      <template v-slot:item="{ item }">
-        <v-breadcrumbs-item
-            :href="item.href"
-            :disabled="item.disabled"
-        >
-          {{ item.title }}
-        </v-breadcrumbs-item>
-      </template>
-    </v-breadcrumbs>
-  </template>
-
-  <v-data-table
-      :headers="headers"
-      :items="desserts"
-      class="elevation-1"
-  >
-    <template v-slot:top>
-      <v-toolbar
-          flat
-      >
-        <v-toolbar-title>Company example</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-        <template>
-          <v-btn
-              color="primary"
-              dark
-              class="mb-2"
-          >
-            Actions menu
-          </v-btn>
+    <template>
+      <v-breadcrumbs :items="items" class="pa-0 mb-4">
+        <template v-slot:item="{ item }">
+          <v-breadcrumbs-item :href="item.href" :disabled="item.disabled">
+            {{ item.title }}
+          </v-breadcrumbs-item>
         </template>
-      </v-toolbar>
-    </template>
-    <template v-slot:[`item.id`]="{ item }">
-      <v-chip
-          :color="getColor(item.id)"
-          dark
-      >
-        {{ item.id }}
-      </v-chip>
+      </v-breadcrumbs>
     </template>
 
-    <template v-slot:[`item.status`]="{  }">
-      <v-progress-linear
-          olor="blue-lighten-3"
-          class="rounded-pill"
-          v-model="knowledge"
-          height="15"
-      >
-        <strong>{{ Math.ceil(knowledge) }}%</strong>
-      </v-progress-linear>
+    <v-data-table :headers="headers" :items="desserts" class="elevation-1">
+      <template v-slot:top>
+        <v-toolbar flat>
+          <v-toolbar-title>Company example</v-toolbar-title>
 
-    </template>
-    <template v-slot:[`item.actions`]="{ item }">
-      <i class="bi bi-pencil mr-2" style="font-size: 1.2rem;color: cornflowerblue;" @click="editItem(item)"></i>
-      <i class="bi bi-trash" style="font-size: 1.2rem; color:crimson;" @click="deleteItem(item)" ></i>
-    </template>
-  </v-data-table>
-</div>
+          <v-spacer></v-spacer>
+          <template>
+            <v-btn color="primary" dark class="mb-2">
+              Actions menu
+            </v-btn>
+          </template>
+        </v-toolbar>
+      </template>
+      <template v-slot:[`item.id`]="{ item }">
+        <v-chip :color="getColor(item.id)" dark>
+          {{ item.id }}
+        </v-chip>
+      </template>
+
+      <template v-slot:[`item.status`]="{}">
+        <v-progress-linear olor="blue-lighten-3" class="rounded-pill" v-model="knowledge" height="15">
+          <strong>{{ Math.ceil(knowledge) }}%</strong>
+        </v-progress-linear>
+
+      </template>
+      <template v-slot:[`item.actions`]="{ item }">
+        <i class="bi bi-pencil mr-2" style="font-size: 1.2rem;color: cornflowerblue;" @click="editItem(item)"></i>
+        <i class="bi bi-trash" style="font-size: 1.2rem; color:crimson;" @click="deleteItem(item)"></i>
+      </template>
+    </v-data-table>
+  </div>
 </template>
 <script>
 export default {
@@ -95,13 +74,13 @@ export default {
         sortable: false,
         value: 'nombre',
       },
-      {text: 'Calories', value: 'id'},
-      {text: 'Fat (g)', value: 'categoria'},
-      {text: 'Carbs (g)', value: 'autor'},
-      {text: 'Protein (g)', value: 'grupo'},
-      {text: 'Iron (%)', value: 'restaurante'},
-      {text: 'Status',value: 'status'},
-      {text: 'Actions', value: 'actions', sortable: false},
+      { text: 'Calories', value: 'id' },
+      { text: 'Fat (g)', value: 'categoria' },
+      { text: 'Carbs (g)', value: 'autor' },
+      { text: 'Protein (g)', value: 'grupo' },
+      { text: 'Iron (%)', value: 'restaurante' },
+      { text: 'Status', value: 'status' },
+      { text: 'Actions', value: 'actions', sortable: false },
     ],
     desserts: [],
   }),
@@ -114,14 +93,15 @@ export default {
       else if (calories > 200) return 'orange'
       else return 'green'
     },
-    getItems(){
-      fetch('http://localhost:3000/recetas')
-          .then(response => response.json())
-          .then(data => {
-            this.desserts = data
-            console.log({"data":data})
-          })
-          .catch(error => console.error('Error fetching data:', error));
+    getItems() {
+      console.log('code',process.env.VUE_APP_API_URL);
+      fetch(process.env.VUE_APP_API_URL + '/v1/recetas')
+        .then(response => response.json())
+        .then(data => {
+          this.desserts = data
+          console.log({ "data": data })
+        })
+        .catch(error => console.error('Error fetching data:', error));
     },
     editItem() {
 
@@ -132,6 +112,4 @@ export default {
   },
 }
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

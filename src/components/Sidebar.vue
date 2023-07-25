@@ -5,10 +5,11 @@
           v-for="item in items"
           :key="item.title"
           v-model="item.active"
-          :prepend-icon="item.action"
+          
           no-action
       >
         <template v-slot:activator>
+          <i v-bind:class="item.action"></i>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" class="text__sidebar"></v-list-item-title>
           </v-list-item-content>
@@ -35,12 +36,12 @@ export default {
   data: () => ({
     items: [
       {
-        action: 'mdi-ticket',
+        action: 'bi bi-1-square',
         items: [{title: 'List Item'}],
         title: 'Attractions',
       },
       {
-        action: 'mdi-silverware-fork-knife',
+        action: 'bi bi-2-square',
         items: [
           {title: 'Breakfast & brunch'},
           {title: 'New American'},
@@ -49,27 +50,27 @@ export default {
         title: 'Dining',
       },
       {
-        action: 'mdi-school',
+        action: 'bi bi-3-square',
         items: [{title: 'List Item'}],
         title: 'Education',
       },
       {
-        action: 'mdi-human-male-female-child',
+        action: 'bi bi-4-square',
         items: [{title: 'List Item'}],
         title: 'Family',
       },
       {
-        action: 'mdi-bottle-tonic-plus',
+        action: 'bi bi-5-square',
         items: [{title: 'List Item'}],
         title: 'Health',
       },
       {
-        action: 'mdi-briefcase',
+        action: 'bi bi-6-square',
         items: [{title: 'List Item'}],
         title: 'Office',
       },
       {
-        action: 'mdi-tag',
+        action: 'bi bi-7-square',
         items: [{title: 'List Item'}],
         title: 'Promotions',
       },
@@ -79,6 +80,10 @@ export default {
 </script>
 
 <style scoped>
+.bi{
+  font-size: 1.3em;
+  margin-right: 10px;
+}
 .text__sidebar {
   font-size: 12px;
   font-weight: 500;
