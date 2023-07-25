@@ -12,7 +12,7 @@
       </v-breadcrumbs>
     </template>
 
-    <v-data-table :headers="headers" :items="desserts" class="elevation-1">
+    <v-data-table :headers="headers" :items="desserts" class="card__custom-style">
       <template v-slot:top>
         <v-toolbar flat>
           <v-toolbar-title>Company example</v-toolbar-title>
@@ -25,15 +25,15 @@
           </template>
         </v-toolbar>
       </template>
-      <template v-slot:[`item.id`]="{ item }">
-        <v-chip :color="getColor(item.id)" dark>
+      <template v-slot:[`item.caloria`]="{ item }">
+        <v-chip :color="getColor(item.caloria)" dark>
           {{ item.id }}
         </v-chip>
       </template>
 
-      <template v-slot:[`item.status`]="{}">
+      <template v-slot:[`item.hierro`]="{item}">
         <v-progress-linear olor="blue-lighten-3" class="rounded-pill" v-model="knowledge" height="15">
-          <strong>{{ Math.ceil(knowledge) }}%</strong>
+          <strong>{{ Math.ceil(item.hierro) }}%</strong>
         </v-progress-linear>
 
       </template>
@@ -74,11 +74,11 @@ export default {
         sortable: false,
         value: 'nombre',
       },
-      { text: 'Calories', value: 'id' },
-      { text: 'Fat (g)', value: 'categoria' },
-      { text: 'Carbs (g)', value: 'autor' },
-      { text: 'Protein (g)', value: 'grupo' },
-      { text: 'Iron (%)', value: 'restaurante' },
+      { text: 'Calories', value: 'caloria' },
+      { text: 'Fat (g)', value: 'grasa' },
+      { text: 'Carbs (g)', value: 'carbohidrato' },
+      { text: 'Protein (g)', value: 'proteina' },
+      { text: 'Iron (%)', value: 'hierro' },
       { text: 'Status', value: 'status' },
       { text: 'Actions', value: 'actions', sortable: false },
     ],
@@ -112,4 +112,9 @@ export default {
   },
 }
 </script>
-<style scoped></style>
+<style scoped>
+.card__custom-style{
+  box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);
+  border-width: 0;
+}
+</style>

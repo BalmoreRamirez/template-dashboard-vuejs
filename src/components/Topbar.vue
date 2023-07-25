@@ -8,7 +8,7 @@
         src="@/assets/logo-inverse.png"
     ></v-img>
 
-    <v-app-bar-nav-icon class="ml-16" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon style="margin-left: 119px" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
 
     <v-spacer/>
 
