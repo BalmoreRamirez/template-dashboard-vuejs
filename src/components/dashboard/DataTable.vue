@@ -59,19 +59,8 @@
 
     </template>
     <template v-slot:[`item.actions`]="{ item }">
-      <v-icon
-          color="primary"
-          class="mr-2"
-          @click="editItem(item)"
-      >
-        mdi-pencil
-      </v-icon>
-      <v-icon
-          color="red"
-          @click="deleteItem(item)"
-      >
-        mdi-delete
-      </v-icon>
+      <i class="bi bi-pencil mr-2" style="font-size: 1.2rem;color: cornflowerblue;" @click="editItem(item)"></i>
+      <i class="bi bi-trash" style="font-size: 1.2rem; color:crimson;" @click="deleteItem(item)" ></i>
     </template>
   </v-data-table>
 </div>

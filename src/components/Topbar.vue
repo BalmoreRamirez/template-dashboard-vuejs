@@ -1,4 +1,5 @@
 <template>
+  
   <v-system-bar app color=”white” height="60" fixed class="px-5"
                 style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
     <v-img
@@ -42,7 +43,7 @@
             </p>
           </v-card-title>
         </v-img>
-        <v-list width="250" class="py-0">
+        <v-list class="py-0">
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
             <v-list-item-icon>
