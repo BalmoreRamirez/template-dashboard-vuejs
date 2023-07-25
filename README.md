@@ -1,4 +1,4 @@
-## Dashboard vuejs y vuetify
+## ArchitectUI Admin Dashboard | Unofficial Vue version with Vuetify 2
 ![img_2.png](img_2.png)
 ## Descripcion
 Dashboard es una estructura de plantilla web creada con Vue.js y Vuetify que facilita la concentración en la lógica de negocio a los programadores sin dejar atrás la importancia de la experiencia de usuario.
