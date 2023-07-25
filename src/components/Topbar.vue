@@ -8,7 +8,7 @@
         src="@/assets/logo-inverse.png"
     ></v-img>
 
-    <v-app-bar-nav-icon class="ml-10" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon class="ml-16" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
 
     <v-spacer/>
 
@@ -46,9 +46,12 @@
         <v-list class="py-0">
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
-            <v-list-item-icon>
-              <v-icon>{{ menu.icon }}</v-icon>
+
+            <v-list-item-icon class="card__profile-topbar">
+              <i v-bind:class="menu.icon"></i>
+
             </v-list-item-icon>
+
             <v-list-item-title class="text__profile-child">
               {{ menu.title }}
             </v-list-item-title>
@@ -66,10 +69,10 @@ export default {
   data() {
     return {
       menus: [
-        {title: "Perfil", icon: "mdi-account"},
-        {title: "Cambiar contraseña", icon: "mdi-key"},
-        {title: "Configuración", icon: "mdi-cog"},
-        {title: "Cierre de sesión", icon: "mdi-logout"},
+        {title: "Perfil", icon: "bi bi-person"},
+        {title: "Cambiar contraseña", icon: "bi bi-key"},
+        {title: "Configuración", icon: "bi bi-gear"},
+        {title: "Cierre de sesión", icon: "bi bi-box-arrow-right"},
       ],
     };
   },
@@ -77,9 +80,13 @@ export default {
 </script>
 
 <style scoped>
+.card__profile-topbar{
+  color: #3f6ad8;
+}
 .text__profile-child {
   font-size: 11px;
   font-weight: 400;
+  color: #3f6ad8;
 }
 
 .v-system-bar .v-btn .v-icon {
