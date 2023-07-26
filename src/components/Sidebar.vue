@@ -83,6 +83,11 @@ a {
   text-decoration: none;
 }
 
+.bi {
+  font-size: 1em;
+  margin-right: 10px;
+}
+
 .text__sidebar {
   font-size: 12px;
   font-weight: 500;
