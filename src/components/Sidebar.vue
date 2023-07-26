@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app :value="drawer" style="z-index: 3;box-shadow: 7px 0 60px rgba(0,0,0,.05);" width="285">
+  <v-navigation-drawer app :value="drawer" style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);" width="285">
     <v-list>
       <v-list-group v-for="item in items" :key="item.title" v-model="item.active" no-action>
         <template v-slot:activator>
@@ -81,11 +81,6 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
-}
-
-.bi {
-  font-size: 1em;
-  margin-right: 10px;
 }
 
 .text__sidebar {
