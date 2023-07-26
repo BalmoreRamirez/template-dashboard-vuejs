@@ -8,14 +8,16 @@ export default new Router({
     base:process.env.BASE_URL,
     routes:[
         {
+
+            path:'/',
+            name:'home',
+            component:()=>import('../components/dashboard/card-dashboard.vue')
+        },
+        {
+
             path:'/data-table',
             name:'data-table',
             component:()=>import('@/components/home/DataTable.vue')
-        }
-        ,{
-            path:'/dashboard',
-            name:'dashboard',
-            component:()=>import('../components/dashboard/card-dashboard.vue')
         }
     ]
 });

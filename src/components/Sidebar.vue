@@ -13,9 +13,8 @@
           <i v-bind:class="child.icon"></i>
           <v-list-item-content>
 
-            <v-list-item-title v-text="child.title" class="text__sidebar-child">
-              <router-link :to="child.route"></router-link>
-            </v-list-item-title>
+              <router-link :to="child.route" v-text="child.title" class="text__sidebar-child"></router-link>
+
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -37,9 +36,9 @@ export default {
       {
         action: 'bi bi-basket',
         items: [
-          {icon: 'bi bi-calendar', title: 'Breakfast & brunch'},
-          {icon: 'bi bi-calendar', title: 'New American'},
-          {icon: 'bi bi-calendar', title: 'Sushi'},
+          {icon: 'bi bi-calendar', title: 'Breakfast & brunch', route: 'data-table'},
+          {icon: 'bi bi-calendar', title: 'New American', route: 'data-table'},
+          {icon: 'bi bi-calendar', title: 'Sushi', route: 'data-table'},
         ],
         title: 'Dining',
       },
@@ -48,29 +47,30 @@ export default {
         items: [
           {
             icon: 'bi bi-calendar',
-            title: 'List Item'
+            title: 'List Item',
+            route: 'data-table'
           }
         ],
         title: 'Education',
       },
       {
         action: 'bi bi-calendar',
-        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
+        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
         title: 'Family',
       },
       {
         action: 'bi bi-cart',
-        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
+        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
         title: 'Health',
       },
       {
         action: 'bi bi-chat',
-        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
+        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
         title: 'Office',
       },
       {
         action: 'bi bi-clipboard-data',
-        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
+        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
         title: 'Promotions',
       },
     ],
@@ -79,6 +79,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
+
 .bi {
   font-size: 1em;
   margin-right: 10px;

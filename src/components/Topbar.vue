@@ -1,7 +1,10 @@
 <template>
   <v-system-bar app color=”white” height="60" fixed class="px-5"
     style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
-    <v-img max-height="23" max-width="97" src="@/assets/logo-inverse.png"></v-img>
+
+   <router-link to="/">
+     <v-img max-height="23" max-width="97" src="@/assets/logo-inverse.png"></v-img>
+   </router-link>
 
     <v-app-bar-nav-icon style="margin-left: 119px" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
 
