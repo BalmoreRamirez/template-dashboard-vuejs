@@ -1,7 +1,6 @@
 <template>
-  <div>
+<v-container>
     <h2 style="color: #495057;font-weight: 400; font-size: 1.25rem">Datos en tiempo real</h2>
-
     <template>
       <v-breadcrumbs :items="items" class="pa-0 mb-4">
         <template v-slot:item="{ item }">
@@ -42,7 +41,8 @@
         <i class="bi bi-trash" style="font-size: 1.2rem; color:crimson;" @click="deleteItem(item)"></i>
       </template>
     </v-data-table>
-  </div>
+
+</v-container>
 </template>
 <script>
 export default {

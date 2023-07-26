@@ -1,14 +1,14 @@
 <template>
   <v-system-bar app color=”white” height="60" fixed class="px-5"
-    style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
+                style="background-color:#fafbfc;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;">
 
-   <router-link to="/">
-     <v-img max-height="23" max-width="97" src="@/assets/logo-inverse.png"></v-img>
-   </router-link>
+    <router-link to="/">
+      <v-img max-height="23" max-width="97" src="@/assets/logo-inverse.png"></v-img>
+    </router-link>
 
     <v-app-bar-nav-icon style="margin-left: 119px" @click="$emit('drawerEvent')"></v-app-bar-nav-icon>
 
-    <v-spacer />
+    <v-spacer/>
 
     <v-menu offset-y>
       <template v-slot:activator="{ attrs, on }">
@@ -16,7 +16,7 @@
           <v-chip link>
             <v-badge dot bottom color="green" offset-y="10" offset-x="10">
               <v-avatar size="40">
-                <v-img src="https://randomuser.me/api/portraits/women/81.jpg" />
+                <v-img src="https://randomuser.me/api/portraits/women/81.jpg"/>
               </v-avatar>
             </v-badge>
             <span class="ml-3 name-profile">Maria Ramirez</span>
@@ -36,7 +36,7 @@
           </v-card-title>
         </v-img>
         <v-list class="py-0">
-          <v-divider />
+          <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
 
             <v-list-item-icon class="card__profile-topbar">
@@ -61,13 +61,14 @@ export default {
   data() {
     return {
       menus: [
-        { title: "Perfil", icon: "bi bi-person" },
-        { title: "Cambiar contraseña", icon: "bi bi-key" },
-        { title: "Configuración", icon: "bi bi-gear" },
-        { title: "Cierre de sesión", icon: "bi bi-box-arrow-right" },
+        {title: "Perfil", icon: "bi bi-person"},
+        {title: "Cambiar contraseña", icon: "bi bi-key"},
+        {title: "Configuración", icon: "bi bi-gear"},
+        {title: "Cierre de sesión", icon: "bi bi-box-arrow-right"},
       ],
     };
-  },
+
+  }
 };
 </script>
 

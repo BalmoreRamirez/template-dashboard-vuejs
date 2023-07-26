@@ -8,13 +8,10 @@
             <v-list-item-title v-text="item.title" class="text__sidebar"></v-list-item-title>
           </v-list-item-content>
         </template>
-
-        <v-list-item v-for="child in item.items" :key="child.title" link>
+        <v-list-item v-for="child in item.items" :key="child.title" :to="child.route" link>
           <i v-bind:class="child.icon"></i>
           <v-list-item-content>
-
-              <router-link :to="child.route" v-text="child.title" class="text__sidebar-child"></router-link>
-
+            <v-list-item-title v-text="child.title" class="text__sidebar-child"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -24,6 +21,7 @@
 
 <script>
 export default {
+  activador:false,
   name: "SideBar",
   props: ["drawer"],
   data: () => ({
