@@ -95,7 +95,7 @@ export default {
     },
     getItems() {
       console.log('code',process.env.VUE_APP_API_URL);
-      fetch(process.env.VUE_APP_API_URL + '/v1/recetas')
+      fetch(process.env.VUE_APP_API_URL + '/v1/recipe')
         .then(response => response.json())
         .then(data => {
           this.desserts = data

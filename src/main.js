@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 import vuetify from './plugins/vuetify'
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 
-//import dotenv from 'dotenv'
-//dotenv.config()
 
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   vuetify,
   render: h => h(App)
 }).$mount('#app')

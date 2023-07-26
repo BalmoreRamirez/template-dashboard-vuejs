@@ -9,11 +9,13 @@
           </v-list-item-content>
         </template>
 
-
         <v-list-item v-for="child in item.items" :key="child.title" link>
           <i v-bind:class="child.icon"></i>
           <v-list-item-content>
-            <v-list-item-title v-text="child.title" class="text__sidebar-child"></v-list-item-title>
+
+            <v-list-item-title v-text="child.title" class="text__sidebar-child">
+              <router-link :to="child.route"></router-link>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -29,15 +31,15 @@ export default {
     items: [
       {
         action: 'bi bi-bank2',
-        items: [{  icon: 'bi bi-calendar',title: 'List Item' }],
-        title: 'Attractions',
+        items: [{icon: 'bi bi-calendar', title: 'DataTable', route: 'data-table'}],
+        title: 'Home',
       },
       {
         action: 'bi bi-basket',
         items: [
-          {  icon: 'bi bi-calendar',title: 'Breakfast & brunch' },
-          {  icon: 'bi bi-calendar',title: 'New American' },
-          {  icon: 'bi bi-calendar',title: 'Sushi' },
+          {icon: 'bi bi-calendar', title: 'Breakfast & brunch'},
+          {icon: 'bi bi-calendar', title: 'New American'},
+          {icon: 'bi bi-calendar', title: 'Sushi'},
         ],
         title: 'Dining',
       },
@@ -53,22 +55,22 @@ export default {
       },
       {
         action: 'bi bi-calendar',
-        items: [{ icon: 'bi bi-calendar', title: 'List Item' }],
+        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
         title: 'Family',
       },
       {
         action: 'bi bi-cart',
-        items: [{ icon: 'bi bi-calendar', title: 'List Item' }],
+        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
         title: 'Health',
       },
       {
         action: 'bi bi-chat',
-        items: [{  icon: 'bi bi-calendar',title: 'List Item' }],
+        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
         title: 'Office',
       },
       {
         action: 'bi bi-clipboard-data',
-        items: [{ icon: 'bi bi-calendar', title: 'List Item' }],
+        items: [{icon: 'bi bi-calendar', title: 'List Item'}],
         title: 'Promotions',
       },
     ],

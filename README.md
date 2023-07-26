@@ -8,13 +8,13 @@ Antes de ejecutar la aplicación, asegúrate de que tienes las siguientes versio
 1. Clonar el repositorio:
 
 ```bash
-git clone git@github.com:BalmoreRamirez/template-dashboard-vuejs.git
+git clone git@github.com:BalmoreRamirez/template-home-vuejs.git
 ```
 
 2. Navegue hasta el directorio del proyecto:
 
 ```bash
-cd template-dashboard-vuejs
+cd template-home-vuejs
 ```
 
 3. Instalar las dependencias:
