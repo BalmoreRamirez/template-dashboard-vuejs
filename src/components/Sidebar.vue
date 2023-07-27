@@ -3,8 +3,7 @@
     style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);"
     width="285">
     <v-list>
-
-      <v-list-group v-for="item in items" :key="item.title" no-action :value="activeItem" v-model="activeItem">
+      <v-list-group v-for="item in items" :key="item.title" no-action :value="active" >
         <template v-slot:activator>
           <i v-bind:class="item.action"></i>
           <v-list-item-content>
@@ -76,13 +75,7 @@ export default {
         title: 'Promotions',
       },
     ],
-    activeItem: null
   }),
-  watch:{
-    activeItem(val){
-      console.log(val);
-    }
-  }
 };
 </script>
 
