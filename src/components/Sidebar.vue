@@ -1,7 +1,10 @@
 <template>
-  <v-navigation-drawer app :value="drawer" style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);" width="285">
+  <v-navigation-drawer app :value="drawer"
+    style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);"
+    width="285">
     <v-list>
-      <v-list-group v-for="item in items" :key="item.title" v-model="item.active" no-action>
+
+      <v-list-group v-for="item in items" :key="item.title" no-action :value="activeItem" v-model="activeItem">
         <template v-slot:activator>
           <i v-bind:class="item.action"></i>
           <v-list-item-content>
@@ -15,28 +18,28 @@
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
+
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
 export default {
-  activador:false,
   name: "SideBar",
-  props: ["drawer"],
+  props: ["drawer","active"],
   data: () => ({
     items: [
       {
         action: 'bi bi-bank2',
-        items: [{icon: 'bi bi-calendar', title: 'DataTable', route: 'data-table'}],
+        items: [{ icon: 'bi bi-calendar', title: 'DataTable', route: 'data-table' }],
         title: 'Home',
       },
       {
         action: 'bi bi-basket',
         items: [
-          {icon: 'bi bi-calendar', title: 'Breakfast & brunch', route: 'data-table'},
-          {icon: 'bi bi-calendar', title: 'New American', route: 'data-table'},
-          {icon: 'bi bi-calendar', title: 'Sushi', route: 'data-table'},
+          { icon: 'bi bi-calendar', title: 'Breakfast & brunch', route: 'data-table' },
+          { icon: 'bi bi-calendar', title: 'New American', route: 'data-table' },
+          { icon: 'bi bi-calendar', title: 'Sushi', route: 'data-table' },
         ],
         title: 'Dining',
       },
@@ -53,26 +56,33 @@ export default {
       },
       {
         action: 'bi bi-calendar',
-        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
+        active:true,
+        items: [{ icon: 'bi bi-calendar', title: 'List Item', route: 'data-table' }],
         title: 'Family',
       },
       {
         action: 'bi bi-cart',
-        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
+        items: [{ icon: 'bi bi-calendar', title: 'List Item', route: 'data-table' }],
         title: 'Health',
       },
       {
         action: 'bi bi-chat',
-        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
+        items: [{ icon: 'bi bi-calendar', title: 'List Item', route: 'data-table' }],
         title: 'Office',
       },
       {
         action: 'bi bi-clipboard-data',
-        items: [{icon: 'bi bi-calendar', title: 'List Item', route: 'data-table'}],
+        items: [{ icon: 'bi bi-calendar', title: 'List Item', route: 'data-table' }],
         title: 'Promotions',
       },
     ],
+    activeItem: null
   }),
+  watch:{
+    activeItem(val){
+      console.log(val);
+    }
+  }
 };
 </script>
 
