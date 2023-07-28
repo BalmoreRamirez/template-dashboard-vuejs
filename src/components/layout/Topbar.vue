@@ -52,17 +52,14 @@
 <script>
 export default {
   name: `TopBar`,
-  data() {
-    return {
-      menus: [
-        {title: "Perfil", icon: "bi bi-person"},
-        {title: "Cambiar contraseña", icon: "bi bi-key"},
-        {title: "Configuración", icon: "bi bi-gear"},
-        {title: "Cierre de sesión", icon: "bi bi-box-arrow-right"},
-      ],
-    };
-
-  }
+  data: () => ({
+    menus: [
+      {title: "Perfil", icon: "bi bi-person"},
+      {title: "Cambiar contraseña", icon: "bi bi-key"},
+      {title: "Configuración", icon: "bi bi-gear"},
+      {title: "Cierre de sesión", icon: "bi bi-box-arrow-right"},
+    ],
+  })
 };
 </script>
 
@@ -87,5 +84,11 @@ export default {
   .name-profile {
     display: none;
   }
+}
+@media (max-width: 500px) {
+  .v-app-bar__nav-icon{
+    margin-left: 0 !important;
+  }
+
 }
 </style>

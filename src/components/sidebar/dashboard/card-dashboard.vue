@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h2 style="color: #495057;font-weight: 400; font-size: 1.25rem">Datos en tiempo real</h2>
+    <h2 style="color: #495057;font-weight: 400; font-size: 1.25rem">Typography</h2>
 
     <template>
       <v-breadcrumbs :items="items" class="pa-0 mb-4">

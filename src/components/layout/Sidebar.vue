@@ -12,7 +12,7 @@
         </template>
 
         <v-list-item v-for="child in item.items" :key="child.title" :to="child.route" link>
-          <i v-bind:class="child.icon"></i>
+          <i v-bind:class="child.icon" class="icon__sidebar"></i>
           <v-list-item-content>
             <v-list-item-title v-text="child.title" class="text__sidebar-child"></v-list-item-title>
           </v-list-item-content>
@@ -32,10 +32,16 @@ export default {
     items: [
       {
         action: 'bi bi-bank2',
-        items: [{icon: 'bi bi-calendar', title: 'DataTable', route: 'data-table'}],
-        title: 'Home',
+        items: [
+          {
+            icon: 'bi bi-spellcheck', title: 'Typography', route: 'typography'
+          }, {
+            icon: 'bi bi-calendar',
+            title: 'DataTable',
+            route: 'data-table'
+          }],
+        title: 'Sales',
       },
-
     ],
   }),
 };
@@ -60,4 +66,14 @@ a {
   font-size: 11px;
   font-weight: 400;
 }
+@media (max-width: 1263px) {
+  .v-navigation-drawer{
+    margin-top: 60px;
+  }
+  .v-app-bar__nav-icon{
+    margin-left: 0;
+  }
+
+}
+
 </style>

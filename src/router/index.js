@@ -1,23 +1,15 @@
 import Vue from "vue";
-import Router  from "vue-router";
+import Router from "vue-router";
+
 Vue.use(Router);
-
-
 export default new Router({
-    mode:'history',
-    base:process.env.BASE_URL,
-    routes:[
+    mode: 'history', base: process.env.BASE_URL, routes: [
         {
-
-            path:'/',
-            name:'home',
-            component:()=>import('../components/dashboard/card-dashboard.vue')
-        },
-        {
-
-            path:'/data-table',
-            name:'data-table',
-            component:()=>import('@/components/home/DataTable.vue')
+            path: '/', name: 'home', component: () => import('@/components/sidebar/dashboard/card-dashboard.vue')
+        }, {
+            path: '/data-table', name: 'data-table', component: () => import('@/components/sidebar/home/DataTable.vue')
+        },{
+            path: '/typography', name: 'typography', component: () => import('@/components/sidebar/dashboard/card-dashboard.vue')
         }
     ]
 });

@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
-    <SideBar :drawer="drawer" :active="active"/>
-    <TopBar @drawerEvent="drawer = !drawer" @eventActiveMenu="active = !active"/>
+    <SideBar :drawer="drawer"/>
+    <TopBar @drawerEvent="drawer = !drawer"/>
     <v-main style="background: #f1f4f6">
       <v-container class="py-8 px-6" fluid>
         <RouterView/>
@@ -11,15 +11,15 @@
 </template>
 
 <script>
-import SideBar from "./components/Sidebar";
-import TopBar from "./components/Topbar";
+import SideBar from "./components/layout/Sidebar.vue";
+import TopBar from "./components/layout/Topbar.vue";
+//import Login from "@/views/Login.vue";
 
 export default {
   name: "App",
   components: {TopBar, SideBar},
   data: () => ({
     drawer: true,
-    active: null,
   }),
 };
 </script>
