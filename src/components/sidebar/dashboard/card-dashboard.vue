@@ -12,7 +12,7 @@
       </v-breadcrumbs>
     </template>
     <v-row>
-      <v-col cols="12">
+      <v-col lg="12" md="12" sm="12">
         <template>
           <v-card class="mx-auto card__custom-style"
           >
@@ -36,7 +36,7 @@
           </v-card>
         </template>
       </v-col>
-      <v-col cols="6">
+      <v-col lg="6" md="12" sm="12">
         <template>
           <v-card class="mx-auto card__custom-style"
           >
@@ -60,7 +60,7 @@
           </v-card>
         </template>
       </v-col>
-      <v-col cols="6">
+      <v-col lg="6" md="12" sm="12">
         <template>
           <v-card class="mx-auto card__custom-style"
           >
@@ -84,7 +84,7 @@
           </v-card>
         </template>
       </v-col>
-      <v-col cols="6">
+      <v-col lg="6" md="12" sm="12">
         <template>
           <v-card class="mx-auto card__custom-style"
           >
@@ -108,7 +108,7 @@
           </v-card>
         </template>
       </v-col>
-      <v-col cols="6">
+      <v-col lg="6" md="12" sm="12">
         <template>
           <v-card class="mx-auto card__custom-style"
           >
@@ -162,8 +162,8 @@ export default {
 </script>
 
 <style scoped>
-.card__custom-style{
-  box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03) !important;
+.card__custom-style {
+  box-shadow: 0 .46875rem 2.1875rem rgba(4, 9, 20, .03), 0 .9375rem 1.40625rem rgba(4, 9, 20, .03), 0 .25rem .53125rem rgba(4, 9, 20, .05), 0 .125rem .1875rem rgba(4, 9, 20, .03) !important;
   border-width: 0;
 }
 </style>

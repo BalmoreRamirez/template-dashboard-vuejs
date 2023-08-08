@@ -3,7 +3,7 @@
                        style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);"
                        width="285">
     <v-list>
-      <v-list-group v-for="item in items" :key="item.title" no-action :value="active">
+      <v-list-group v-for="item in items" :key="item.title" no-action >
         <template v-slot:activator>
           <i v-bind:class="item.action" class="icon__sidebar"></i>
           <v-list-item-content>
@@ -27,7 +27,7 @@
 <script>
 export default {
   name: "SideBar",
-  props: ["drawer", "active"],
+  props: ["drawer"],
   data: () => ({
     items: [
       {

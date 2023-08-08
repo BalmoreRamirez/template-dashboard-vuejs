@@ -13,7 +13,6 @@
 <script>
 import SideBar from "./components/layout/Sidebar.vue";
 import TopBar from "./components/layout/Topbar.vue";
-//import Login from "@/views/Login.vue";
 
 export default {
   name: "App",
@@ -23,3 +22,4 @@ export default {
   }),
 };
 </script>
+

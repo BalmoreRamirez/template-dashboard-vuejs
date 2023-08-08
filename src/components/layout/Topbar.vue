@@ -65,17 +65,17 @@ export default {
 
 <style scoped>
 .card__profile-topbar {
-  color: #3f6ad8;
+  color: var(--blue-primary);
 }
 
 .text__profile-child {
   font-size: 11px;
   font-weight: 400;
-  color: #3f6ad8;
+  color: var(--blue-primary);
 }
 
 .v-system-bar .v-btn .v-icon {
-  color: #3f6ad8;
+  color: var(--blue-primary);
   width: 22px;
   height: 2px;
 }
@@ -85,10 +85,10 @@ export default {
     display: none;
   }
 }
+
 @media (max-width: 500px) {
   .v-app-bar__nav-icon{
     margin-left: 0 !important;
   }
-
 }
 </style>

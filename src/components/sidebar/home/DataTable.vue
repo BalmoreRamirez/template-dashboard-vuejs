@@ -79,7 +79,6 @@ export default {
       { text: 'Carbs (g)', value: 'carbohidrato' },
       { text: 'Protein (g)', value: 'proteina' },
       { text: 'Iron (%)', value: 'hierro' },
-      { text: 'Status', value: 'status' },
       { text: 'Actions', value: 'actions', sortable: false },
     ],
     desserts: [

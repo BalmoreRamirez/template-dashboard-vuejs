@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import './assets/style.css'
 
 
 Vue.config.productionTip = false
