@@ -12,124 +12,116 @@
     </template>
     <v-row dense>
       <v-col cols="12" lg="12" md="6" sm="12">
+        <v-card class=" mx-auto card__custom-style"
+        >
+          <v-card-title>
+            <div>Word of the Day 1</div>
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-card-text>
+            <p>adjective</p>
+            <div class="text--primary">
+              well meaning and kindly.<br>
+              "a benevolent smile"
+            </div>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Footer</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
 
-          <v-card class=" mx-auto card__custom-style"
-          >
-            <v-card-title>
-              <div>Word of the Day 1</div>
-            </v-card-title>
-            <v-divider></v-divider>
-            <v-card-text>
-              <p>adjective</p>
-              <div class="text--primary">
-                well meaning and kindly.<br>
-                "a benevolent smile"
-              </div>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Footer</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
+      </v-col>
+      <v-col cols="12" lg="6" md="6" sm="12">
+
+        <v-card class="mx-auto card__custom-style"
+        >
+          <v-card-title>
+            <div>Word of the Day</div>
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-card-text>
+            <p>adjective</p>
+            <div class="text--primary">
+              well meaning and kindly.<br>
+              "a benevolent smile"
+            </div>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Footer</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
 
       </v-col>
       <v-col cols="12" lg="6" md="6" sm="12">
-        <template>
-          <v-card class="mx-auto card__custom-style"
-          >
-            <v-card-title>
-              <div>Word of the Day</div>
-            </v-card-title>
-            <v-divider></v-divider>
-            <v-card-text>
-              <p>adjective</p>
-              <div class="text--primary">
-                well meaning and kindly.<br>
-                "a benevolent smile"
-              </div>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Footer</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </template>
+        <v-card class="mx-auto card__custom-style">
+          <v-card-title>
+            <div>Word of the Day</div>
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-card-text>
+            <p>adjective</p>
+            <div class="text--primary">
+              well meaning and kindly.<br>
+              "a benevolent smile"
+            </div>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Footer</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
+
       </v-col>
       <v-col cols="12" lg="6" md="6" sm="12">
-        <template>
-          <v-card class="mx-auto card__custom-style"
-          >
-            <v-card-title>
-              <div>Word of the Day</div>
-            </v-card-title>
-            <v-divider></v-divider>
-            <v-card-text>
-              <p>adjective</p>
-              <div class="text--primary">
-                well meaning and kindly.<br>
-                "a benevolent smile"
-              </div>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Footer</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </template>
+        <v-card class="mx-auto card__custom-style">
+          <v-card-title>
+            <div>Word of the Day</div>
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-card-text>
+            <p>adjective</p>
+            <div class="text--primary">
+              well meaning and kindly.<br>
+              "a benevolent smile"
+            </div>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Footer</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
+
       </v-col>
       <v-col cols="12" lg="6" md="6" sm="12">
-        <template>
-          <v-card class="mx-auto card__custom-style"
-          >
-            <v-card-title>
-              <div>Word of the Day</div>
-            </v-card-title>
-            <v-divider></v-divider>
-            <v-card-text>
-              <p>adjective</p>
-              <div class="text--primary">
-                well meaning and kindly.<br>
-                "a benevolent smile"
-              </div>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Footer</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </template>
-      </v-col>
-      <v-col cols="12" lg="6" md="6" sm="12">
-        <template>
-          <v-card class="mx-auto card__custom-style"
-          >
-            <v-card-title>
-              <div>Word of the Day</div>
-            </v-card-title>
-            <v-divider></v-divider>
-            <v-card-text>
-              <p>adjective</p>
-              <div class="text--primary">
-                well meaning and kindly.<br>
-                "a benevolent smile"
-              </div>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-title>Footer</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </template>
+        <v-card class="mx-auto card__custom-style">
+          <v-card-title>
+            <div>Word of the Day</div>
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-card-text>
+            <p>adjective</p>
+            <div class="text--primary">
+              well meaning and kindly.<br>
+              "a benevolent smile"
+            </div>
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Footer</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>

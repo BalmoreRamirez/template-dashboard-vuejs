@@ -20,6 +20,11 @@ export default {
   data: () => ({
     drawer: true,
   }),
+  mounted() {
+    if (window.innerWidth <= 1263) {
+      this.drawer = false;
+    }
+  },
 };
 </script>
 

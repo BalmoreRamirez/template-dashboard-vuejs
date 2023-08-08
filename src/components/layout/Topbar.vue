@@ -32,12 +32,9 @@
         <v-list class="py-0">
           <v-divider/>
           <v-list-item link v-for="(menu, i) in menus" :key="i">
-
             <v-list-item-icon class="card__profile-topbar">
               <i v-bind:class="menu.icon"></i>
-
             </v-list-item-icon>
-
             <v-list-item-title class="text__profile-child">
               {{ menu.title }}
             </v-list-item-title>
@@ -87,7 +84,7 @@ export default {
 }
 
 @media (max-width: 500px) {
-  .v-app-bar__nav-icon{
+  .v-app-bar__nav-icon {
     margin-left: 0 !important;
   }
 }
