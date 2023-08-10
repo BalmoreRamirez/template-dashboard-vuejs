@@ -2,7 +2,6 @@
   <v-container fluid class="pa-0">
     <v-row class="ma-0" align="center" justify="center">
       <v-col cols="5" sm="4" class="login-container">
-
         <v-img src="@/assets/login.jpg"
                gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
                class="login-image">
