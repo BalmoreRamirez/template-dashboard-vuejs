@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="pa-0">
     <v-row class="ma-0" align="center" justify="center">
-      <v-col cols="5" sm="4" class="login-container">
+      <v-col lg="5" sm="4" class="login-container">
         <v-img src="@/assets/login.jpg"
                gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
                class="login-image">
@@ -14,11 +14,10 @@
             </h4>
           </div>
         </v-img>
-
       </v-col>
-      <v-col cols="7" sm="8">
+      <v-col lg="7" sm="12">
         <v-row align="center" justify="center">
-          <v-col cols="6">
+          <v-col lg="6" sm="8">
             <div class="indication_login">
               <p>Bienvenido de nuevo,</p>
               <p>Por favor, acceda a su cuenta.</p>
@@ -95,7 +94,12 @@ export default {
   width: 100%;
   height: 100%;
   background-size: cover;
+}
 
+@media (max-width: 1264px) {
+  .login-container {
+    display: none;
+  }
 }
 
 </style>
