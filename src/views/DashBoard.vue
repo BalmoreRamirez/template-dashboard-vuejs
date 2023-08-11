@@ -10,7 +10,6 @@
 <script>
 import SideBar from '@/components/layout/SideBar.vue';
 import TopBar from '@/components/layout/TopBar.vue';
-
 export default {
   name: "DashBoard",
   components: {
@@ -27,7 +26,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-
-</style>

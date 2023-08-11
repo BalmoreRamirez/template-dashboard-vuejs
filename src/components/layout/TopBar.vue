@@ -31,7 +31,7 @@
         </v-img>
         <v-list class="py-0">
           <v-divider/>
-          <v-list-item link v-for="(menu, i) in menus" :key="i">
+          <v-list-item link v-for="(menu, i) in menus" :key="i" @click="handleMenuClick(menu)">
             <v-list-item-icon class="card__profile-topbar">
               <i v-bind:class="menu.icon"></i>
             </v-list-item-icon>
@@ -56,7 +56,14 @@ export default {
       {title: "Configuración", icon: "bi bi-gear"},
       {title: "Cierre de sesión", icon: "bi bi-box-arrow-right"},
     ],
-  })
+  }),
+  methods:{
+    handleMenuClick(menu){
+      if (menu.title === 'Cierre de sesión') {
+        this.$router.push({name: 'login'});
+      }
+    }
+  }
 };
 </script>
 

@@ -17,8 +17,9 @@
       </v-col>
       <v-col lg="7" sm="12">
         <v-row align="center" justify="center">
-          <v-col lg="6" sm="8">
+          <v-col lg="7" sm="8">
             <div class="indication_login">
+              <img src="../assets/logo-inverse.png" height="23" width="97" class="mb-8"/>
               <p>Bienvenido de nuevo,</p>
               <p>Por favor, acceda a su cuenta.</p>
             </div>
@@ -27,17 +28,29 @@
                             label="Usuario"></v-text-field>
               <v-text-field prepend-inner-icon="mdi mdi-key-outline" outlined v-model="password" label="Contraseña"
                             type="password"></v-text-field>
-              <v-btn depressed color="primary" type="submit">
-                <v-icon
-                    right
-                    dark
-                    class="mr-3"
-                >
-                  mdi-account-check
-                </v-icon>
-                Iniciar sesión
 
-              </v-btn>
+
+              <v-checkbox
+                  :error-messages="checkboxErrors"
+                  label="¿Recordar la contraseña?"
+                  required
+              ></v-checkbox>
+                  <v-btn depressed color="primary" type="submit">
+                    <v-icon
+                        right
+                        dark
+                        class="mr-3"
+                    >
+                      mdi-account-check
+                    </v-icon>
+                    Iniciar sesión
+                  </v-btn>
+
+              <a href="" class="ml-5 restore__password">Recuperar contraseña</a>
+
+
+
+
             </v-form>
           </v-col>
         </v-row>
@@ -64,14 +77,21 @@ export default {
 </script>
 
 <style scoped>
+.restore__password{
+  font-size: 16px;
+}
 .text__image-login {
   color: #fff;
 }
 
 .indication_login p {
-  font-weight: 100;
-  font-size: 1.7rem;
+  font-family: "Manrope";
+  font-size: 16px;
   color: #495057;
+  line-height: 0.5;
+}
+.indication_login {
+  margin-bottom: 30px;
 }
 
 .slider-content {
