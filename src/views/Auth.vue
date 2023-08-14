@@ -15,11 +15,11 @@
           </div>
         </v-img>
       </v-col>
-      <v-col lg="7" sm="12">
+      <v-col lg="7" sm="12" md="8">
         <v-row align="center" justify="center">
           <v-col lg="7" sm="8">
             <div class="indication_login">
-              <img src="../assets/logo-inverse.png" height="23" width="97" class="mb-8"/>
+              <img src="../assets/logo-inverse.png" height="23" width="97" class="mb-8" alt="logo"/>
               <p>Bienvenido de nuevo,</p>
               <p>Por favor, acceda a su cuenta.</p>
             </div>
@@ -28,10 +28,7 @@
                             label="Usuario"></v-text-field>
               <v-text-field prepend-inner-icon="mdi mdi-key-outline" outlined v-model="password" label="Contraseña"
                             type="password"></v-text-field>
-
-
               <v-checkbox
-                  :error-messages="checkboxErrors"
                   label="¿Recordar la contraseña?"
                   required
               ></v-checkbox>
@@ -45,12 +42,7 @@
                     </v-icon>
                     Iniciar sesión
                   </v-btn>
-
               <a href="" class="ml-5 restore__password">Recuperar contraseña</a>
-
-
-
-
             </v-form>
           </v-col>
         </v-row>
@@ -94,20 +86,12 @@ export default {
   margin-bottom: 30px;
 }
 
-.slider-content {
-  position: relative;
-  z-index: 15;
-  text-align: center;
-}
-
 .login-container {
   height: 100vh;
   padding: 0;
-
 }
 
 .login-image {
-
   left: 0;
   top: 0;
   bottom: 0;
@@ -116,7 +100,7 @@ export default {
   background-size: cover;
 }
 
-@media (max-width: 1264px) {
+@media (max-width: 960px) {
   .login-container {
     display: none;
   }
