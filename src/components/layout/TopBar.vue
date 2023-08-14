@@ -49,6 +49,7 @@
 <script>
 export default {
   name: `TopBar`,
+  props: ["isMobile"],
   data: () => ({
     menus: [
       {title: "Perfil", icon: "bi bi-person"},
@@ -57,8 +58,8 @@ export default {
       {title: "Cierre de sesión", icon: "bi bi-box-arrow-right"},
     ],
   }),
-  methods:{
-    handleMenuClick(menu){
+  methods: {
+    handleMenuClick(menu) {
       if (menu.title === 'Cierre de sesión') {
         this.$router.push({name: 'login'});
       }

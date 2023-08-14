@@ -1,9 +1,11 @@
 <template>
-  <v-navigation-drawer app :value="drawer"
+  <v-navigation-drawer app
+                       :value="drawer"
+                       @input="updateDrawer"
                        style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);"
                        width="285">
     <v-list>
-      <v-list-group v-for="item in items" :key="item.title" no-action >
+      <v-list-group v-for="item in items" :key="item.title" no-action>
         <template v-slot:activator>
           <i v-bind:class="item.action" class="icon__sidebar"></i>
           <v-list-item-content>
@@ -27,7 +29,7 @@
 <script>
 export default {
   name: "SideBar",
-  props: ["drawer"],
+  props: ["drawer","isMobile"],
   data: () => ({
     items: [
       {
@@ -44,6 +46,11 @@ export default {
       },
     ],
   }),
+  methods: {
+    updateDrawer(newDrawerState) {
+      this.$emit("updateDrawer", newDrawerState);
+    }
+  }
 };
 </script>
 
@@ -66,11 +73,13 @@ a {
   font-size: 11px;
   font-weight: 400;
 }
+
 @media (max-width: 1263px) {
-  .v-navigation-drawer{
+  .v-navigation-drawer {
     margin-top: 60px;
   }
-  .v-app-bar__nav-icon{
+
+  .v-app-bar__nav-icon {
     margin-left: 0;
   }
 
