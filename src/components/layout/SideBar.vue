@@ -1,9 +1,7 @@
 <template>
-  <v-navigation-drawer app
-                       :value="drawer"
-                       @input="updateDrawer"
-                       style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);"
-                       width="285">
+  <v-navigation-drawer app :value="drawer" @input="updateDrawer"
+    style="z-index: 3;box-shadow: 0 .46875rem 2.1875rem rgba(4,9,20,.03),0 .9375rem 1.40625rem rgba(4,9,20,.03),0 .25rem .53125rem rgba(4,9,20,.05),0 .125rem .1875rem rgba(4,9,20,.03);"
+    width="285">
     <v-list>
       <v-list-group v-for="item in items" :key="item.title" no-action>
         <template v-slot:activator>
@@ -29,7 +27,7 @@
 <script>
 export default {
   name: "SideBar",
-  props: ["drawer","isMobile"],
+  props: ["drawer", "isMobile"],
   data: () => ({
     items: [
       {
@@ -41,6 +39,10 @@ export default {
             icon: 'bi bi-calendar',
             title: 'DataTable',
             route: 'data-table'
+          },{
+            icon: 'bi bi-table',
+            title: 'Form',
+            route: 'form'
           }],
         title: 'Sales',
       },
@@ -84,5 +86,4 @@ a {
   }
 
 }
-
 </style>

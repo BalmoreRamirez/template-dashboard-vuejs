@@ -20,7 +20,7 @@
           <v-col lg="7" sm="8">
             <div class="indication_login">
               <img src="../assets/logo-inverse.png" height="23" width="97" class="mb-8" alt="logo"/>
-              <p>Bienvenido de nuevo,</p>
+              <p>Bienvenido de nuevo.</p>
               <p>Por favor, acceda a su cuenta.</p>
             </div>
             <v-form @submit.prevent="submitForm">
@@ -82,6 +82,7 @@ export default {
   color: #495057;
   line-height: 0.5;
 }
+
 .indication_login {
   margin-bottom: 30px;
 }

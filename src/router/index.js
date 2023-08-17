@@ -31,6 +31,11 @@ export default new Router({
                     path: 'data-table',
                     name: 'data-table',
                     component: () => import('@/components/sidebar/home/DataTable.vue')
+                },
+                {
+                    path: 'form',
+                    name: 'form',
+                    component: () => import('@/views/FormView.vue')
                 }
             ]
         }
